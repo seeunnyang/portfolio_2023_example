@@ -1,0 +1,153 @@
+/* 반응형 대비 최소제한 너비 설정 */
+header,main {min-width:950px;} /* 모두만들고 시간 남으면 모바일까지 적용해보기 */
+/* header */
+header {
+    background:rgba(255, 255, 255, 0.5);
+    position:fixed; left:0; top:0; width:100%; z-index:999;
+    padding:40px 30px 0 30px;
+}
+header nav {
+    border-top: 1px solid #ff4090;
+    border-bottom: 5px solid #ff4090;
+    padding:17px 0;
+    display:flex; justify-content:space-between;
+}
+header nav .gnb {}
+header nav .gnb a {
+    font-size:1.25rem; font-weight:700;
+    letter-spacing:-0.04em;
+    margin-right:30px;
+}
+header nav .gnb a:last-child {margin-right:0;}
+header nav .gnb a:hover {color:#ff4090;}
+header nav .sns {}
+header nav .sns span {
+    font-size:1.25rem;
+    letter-spacing:-0.04em;
+    margin-right:3px;
+}
+header nav .sns span:last-child {margin-right:0;}
+/* main */
+main {background:#fff0f0;}
+main > * {padding:0 30px;}
+/* main > #home */
+main #home {height:100vh; text-align:center;}
+main #home h1 {padding-top:300px;}
+main #home h1 img {}
+main #home .mouse {
+    position:absolute; left:50%; bottom:50px;
+    transform: translateX(-50%);
+}
+main #home .mouse img {animation:mouse_move 1s linear alternate infinite;}
+@keyframes mouse_move {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-20px);}
+}
+/* main > #skill */
+main #skill {}
+main #skill h1 {
+    font-size:2.5rem; font-weight:700;
+    letter-spacing:-0.04em;
+    padding:40px 0 20px 0;
+    border-bottom:5px solid #ff4090;
+}
+main #skill .container {
+    display:flex; flex-flow:column wrap; /* skill 9개 수직 줄바꿈으로 배치하는 flex */
+    align-content: space-between;
+    margin-top:100px; height:680px; 
+    padding:0 100px;
+}
+main #skill .container li {
+    width:46%;
+    display:flex; flex-flow:row nowrap; /* 아이콘, 글자 옆으로 배치는 flex */
+    align-items:start;
+    padding-bottom:30px; margin-bottom:30px;
+    border-bottom:1px dashed #555;
+}
+main #skill .container li:nth-child(5),
+main #skill .container li:nth-child(9) {border-bottom:none;}
+main #skill .container li .icon {width:80px;}
+main #skill .container li .contents{
+    width:calc(100% - 80px); /* icon너비 값을 제외한 나머지 너비값 적용하기 */
+    font-size:1.25rem; letter-spacing:-0.04em;
+    line-height:30px;
+}
+/* main > #profile */
+main #profile {padding:100px 0;}
+main #profile h1 {
+    padding-bottom:50px;
+    text-align: center;
+}
+main #profile h1 img {}
+main #profile .container {
+    display:flex; flex-flow:row nowrap;
+    justify-content:center;
+    width:calc(100% - 300px); margin:0 auto;
+}
+main #profile .container .my {
+    margin-right:200px;
+}
+main #profile .container .my .photo {}
+main #profile .container .my .photo img {}
+main #profile .container .my .name {
+    display:flex; flex-flow:row nowrap;
+    justify-content: center;
+    text-align:start; margin-top:60px;
+}
+main #profile .container .my .name .n_left {}
+main #profile .container .my .name .n_left p {
+    font-size:1.25rem; letter-spacing:-0.04em;
+    font-weight:700; line-height:35px;
+    margin-right:40px;
+}
+main #profile .container .my .name .n_right {}
+main #profile .container .my .name .n_right p {
+    font-size:1.25rem; letter-spacing:-0.04em;
+    line-height:35px;
+}
+main #profile .container .info {}
+
+main #profile .container .info dl {
+    margin-bottom:60px;
+}
+main #profile .container .info .certificate {margin-bottom:0;}
+main #profile .container .info dl dt {
+    font-size:1.6875rem; letter-spacing:-0.04em;
+    font-weight:700; margin-bottom:10px;
+}
+main #profile .container .info dl dd {
+    display:inline;
+    font-size:1.25rem; letter-spacing:-0.04em;
+    line-height:35px;
+}
+main #profile .container .info dl dd span{
+    font-size:1.25rem; letter-spacing:-0.04em;
+    line-height:35px; margin-right:20px;
+}
+/* #project_web1 */
+#project_web1 {
+    display:flex; flex-flow:column nowrap;
+    align-items:center;
+    padding:50px 0;
+}
+#project_web1 h1 {
+    font-size:2.5rem; letter-spacing:-0.04em;
+    font-weight:700;
+}
+#project_web1 .link {}
+#project_web1 .link a {
+    display:inline-block; width:311px; text-align: center;
+    color:#fff; font-size:1.25rem; letter-spacing:-0.04em;
+    padding:20px 30px;
+    background:#000;
+    margin:30px 3px;
+}
+#project_web1 .link a:hover {background:#ff4090;}
+#project_web1 .project_info {}
+#project_web1 .project_info p {
+    font-size:1.6875rem; letter-spacing:-0.04em;
+    line-height:35px;
+    margin-bottom:30px;
+}
+#project_web1 .preview {}
+#project_web1 .preview img {}
